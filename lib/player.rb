@@ -1,18 +1,13 @@
 class Player
-  attr_accessor :money, :bet
+  attr_accessor :hand
 
-  def initialize(args)
-    @money = args[:money]
-    @bet = args[:bet] || 0
+  def initialize
+    @hand = []
   end
 
-  def to_s
-    puts "current bet: #{@bet} --- money left: #{@money} \n"
+  def score
+    @hand.reduce(0) do |sum, card|
+      sum += card.to_i.zero? ? 10 : card.to_i
+    end
   end
-
-  def increase_bet(value)
-    self.bet    += value
-    self.money  -= value
-  end
-
 end

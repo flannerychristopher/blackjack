@@ -19,4 +19,7 @@ class Deck
     @cards = (bottom + top)[0..-dealer_cut]
   end
 
+  def deal
+    @cards.shift
+  end
 end
