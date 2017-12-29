@@ -7,11 +7,6 @@ class Deck
     @cards = shuffle
   end
 
-  def shuffle
-    six_decks = SINGLE_DECK * 6
-    six_decks.shuffle
-  end
-
   def cut(player_cut)
     top = cards[0..player_cut]
     bottom = cards[player_cut..cards.length]
@@ -22,4 +17,12 @@ class Deck
   def deal
     @cards.shift
   end
+
+  private
+
+    def shuffle
+      six_decks = SINGLE_DECK * 6
+      six_decks.shuffle
+    end
+
 end

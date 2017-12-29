@@ -12,7 +12,7 @@ RSpec.describe Player do
     end
   end
 
-  context "scores" do
+  context "#scores" do
     it "a basic hand" do
       @player.hand = ['1']
       expect(@player.scores).to eq([1])

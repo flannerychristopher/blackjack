@@ -3,16 +3,7 @@ class Player
 
   def initialize
     @hand = []
-  end
-
-  # def scores
-  #   @hand.reduce([0]) do |sum, card|
-  #     num = card.to_i.zero? ? 10 : card.to_i
-  #     sum[0] += num
-  #     sum
-  #   end
-  # end
-  
+  end  
   
   def scores(scores = [0])
     hand.each_with_index do |card, i|
@@ -26,5 +17,5 @@ class Player
     end
     scores
   end
-    
+  
 end
